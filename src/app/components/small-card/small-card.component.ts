@@ -1,24 +1,19 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-small-card',
+  standalone: true,
+  imports: [RouterModule, CommonModule],
   templateUrl: './small-card.component.html',
   styleUrls: ['./small-card.component.css']
 })
-export class SmallCardComponent implements OnInit {
-
-  @Input()
-  photoCover:string = ""
-
-  @Input()
-  cardTitle:string = ""
-
-  @Input()
-  Id:string="0"
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class SmallCardComponent {
+  @Input() 
+  photoCover: string = "";
+  @Input() 
+  cardTitle: string = "";
+  @Input() 
+  Id: string = "0";
 }

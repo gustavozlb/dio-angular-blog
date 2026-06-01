@@ -1,31 +1,12 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
-import { MenuTitleComponent } from './components/menu-title/menu-title.component';
-import { BigCardComponent } from './components/big-card/big-card.component';
-import { SmallCardComponent } from './components/small-card/small-card.component';
-import { HomeComponent } from './pages/home/home.component';
-import { ContentComponent } from './pages/content/content.component';
 
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    MenuBarComponent,
-    MenuTitleComponent,
-    BigCardComponent,
-    SmallCardComponent,
-    HomeComponent,
-    ContentComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterModule, MenuBarComponent],
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class AppModule { }
+export class AppComponent {}
